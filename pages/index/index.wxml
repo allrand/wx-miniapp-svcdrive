@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<import src="../../template/nav" />
+<view class="flex fix_nav_wp">
+  <block wx:for="{{navData}}">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</view>
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 加入我們這樣一群人 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{dispName}}</text>
+    </block>
+  </view>
+</view>

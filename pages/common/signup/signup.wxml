@@ -1,0 +1,16 @@
+<!--pages/common/signin/signup.wxml-->
+
+<view class="container">
+  <view class="sigup-form">
+    <form bindsubmit="signupSubmit" bindreset="loginReset" data-disabled="{{!username}}">
+      <input name="username" bindinput="validate" bindfocus="focus" bindblur="blur" data-name="username" 
+        class="account {{active==='username' ? 'active' : ''}}" />
+      
+      <input name="password" type='password' bindinput="validate" bindfocus="focus" bindblur="blur" data-name="password" 
+        class="password {{active==='password1' ? 'active' : ''}}" />
+      <input name="password1" type='password' bindinput="validate" bindfocus="focus" bindblur="blur" data-name="password1" 
+        class="password {{active==='password' ? 'active' : ''}}" />
+      <button form-type="submit" class="{{!account ? 'BGColor2' : 'BGColor1'}} colorWhite submit">註冊帳號</button>
+    </form>
+  </view>
+</view>

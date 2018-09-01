@@ -1,0 +1,42 @@
+<!--pages/content/content.wxml-->
+<view class="content">
+  <text class="title">{{title}}</text>
+  <view class="divider"></view>
+  <view class="ingredients">
+    <view class="ingredients-inner">
+      <text class="text-bold">简介：\n</text>
+      <text class="ingredients-text">{{foreword}}</text>
+    </view>
+  </view>
+  <block wx:if="{{pic_url !== null}}">
+    <image class='content-img' src="{{pic_url}}"></image>
+  </block>
+  <block wx:else>
+    <image src="../images/empty_img.jpg" class="content-img"></image>
+  </block>
+  <view class="ingredients">
+    <view class="ingredients-inner">
+      <text class="text-bold">作者：\n</text>
+      <text class="ingredients-text">{{authors}}</text>
+    </view>
+  </view>
+  <view class="ingredients">
+    <view class="ingredients-inner">
+      <text class="text-bold">目录：\n</text>
+      <scroll-view scroll-y="true" class="chapter-scroll-list">
+        <view wx:for="{{detail}}">
+          <view wx:if="{{item.lev == 1}}">
+            <navigator class='chapter-scroll-list-item1' hover-class="navigator-hover" url="/pages/publication/bodycopy/bodycopy?id={{item.id}}&name={{item.name}}&chapter={{item.chapter}}"> {{item.name}}</navigator>
+          </view>
+          <view wx:elif="{{item.lev == 2}}">  
+            <navigator class='chapter-scroll-list-item2' hover-class="navigator-hover" url="/pages/publication/bodycopy/bodycopy?id={{item.id}}"> {{item.name}}</navigator>
+          </view>
+          <view wx:else>   
+            <navigator class='chapter-scroll-list-item3' hover-class="navigator-hover" url="/pages/publication/bodycopy/bodycopy?id={{item.id}}"> {{item.name}}</navigator>
+          </view>
+          
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

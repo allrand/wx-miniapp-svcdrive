@@ -1,0 +1,43 @@
+<view class='details' bindsubmit="doaSubmit">
+  <swiper class="detail-container" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindSwiperChange">
+
+    <swiper-item wx:for="{{details}}" wx:for-item="item" wx:key="index">
+      <view class='detail-head-prefix'>
+        <a class="detail-head-prefix1">书名</a>
+        <a class="detail-head-prefix2">条码</a>
+      </view>
+      <view class='detail-head'>
+        <a class='detail-head-name'>{{item.bookName}}</a>
+        <a class='detail-head-code'>{{item.barcode}}</a>
+      </view>
+      <view class="detail-body">
+
+        <view class='detail-body-content'>
+          <view class="scroll-list-dock" wx:for="{{item.dock}}" wx:for-item="book" wx:key="index">
+            <!-- <view class='scroll-list-dock-item-left'> -->
+            <!-- <text>{{book.doa}}</text>
+          <view>{{book.doas[0]}}</view>
+          <view>{{book.doas[1]}}</view> -->
+            <a class='scroll-list-dock-period'> {{book.doas[0][0]}} </a>
+            <a class='scroll-list-dock-period2'>{{book.doas[0][1]}} </a>
+            <a class='scroll-list-dock-process'>{{book.doas[1]}} </a>
+            <!-- <view class='scroll-list-dock-slider'>
+            <slider min="0" max="100" value='{{book.pc*100}}' show-value='true' disabled='true' />
+          </view> -->
+          </view>
+        </view>
+      </view>
+      <view class='dock-submit-doa'>
+
+        <label>最新進度</label>
+        <input type="text" placeholder='請填寫最新進度情況' placeholder-style="color:rgb(173,185,193)" bindinput='bindDoaValue'>{{latestDOA}}</input>
+        <button type='primary' bindtap='doaSubmit'>+</button>
+        <!-- form-type='submit'  -->
+      </view>
+    </swiper-item>
+
+
+
+
+  </swiper>
+</view>

@@ -1,0 +1,2 @@
+<!--pages/publication/bodycopy/bodycopy.wxml-->
+<text>{{text}}</text>

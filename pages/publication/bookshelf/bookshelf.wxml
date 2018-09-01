@@ -1,0 +1,51 @@
+<!--pages/bookshelf.wxml-->
+
+<view class="detail">
+  <view class="content">
+    <view class="menu-container">
+      <scroll-view scroll-y="true" class="scroll-view" scroll-into-view="head-{{indexSize}}">
+        <view class="scroll-view-ul">
+          <block wx:for="{{detail}}" wx:for-item="items" wx:key="index" id="head-{{index}}">
+            <view class="scroll-view-item {{indexSize === index?'active':''}}" bindtap="scrollTo" data-index="{{index}}">{{items.title}}
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+
+    <swiper indicator-dots='true' class="detail-container" bindchange="change" data-index="{{index}}" current="{{indexSize}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+      <swiper-item wx:for="{{detail}}" wx:for-item="item" wx:key="index">
+        <scroll-view scroll-y="true" class="scroll-list">
+          <!-- <view class="title">{{detail[indexSize].title}}</view> -->
+          <a wx:for="{{detail[indexSize].list}}" wx:key="index" wx:key="index" item="item" key="key">
+            <view class="scroll-list-itemname" >{{item.name}}</view>
+            <view class="inner">
+              <view class="cover">
+                <image class="cover-img" data-src="indexSize={{indexSize}}&index={{index}}" bindtap="bindViewTap" style="background-color: #eeeeee;" src="{{item.picUrl}}" />
+              </view>
+              <view class="info overflow">
+                <!-- a10 2018-03-29 -->
+                <view class="info-title">
+                  <!-- <navigator url="{{item.showUrl}}" redirect="true" >{{item.name}}</navigator>  -->
+                  <!-- <navigator url="{{item.showUrl}}">{{item.name}}</navigator> -->
+                </view>
+                <view class="info-subtitle">{{item.subtitle}}</view>
+                <view class="info-desc" style='white-space:pre-wrap'>{{item.description}}</view>
+                <view class="info-lang">
+                  <text class="text">         数量：{{item.quantity}}</text>
+                </view>
+              </view>
+              <!-- <view class="num">
+                  <text class="text">语种：{{item.lang}}</text>
+                </view>  -->
+            </view>
+
+          </a>
+
+        </scroll-view>
+      </swiper-item>
+
+    </swiper>
+
+  </view>
+</view>

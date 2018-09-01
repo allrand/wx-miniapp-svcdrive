@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/common/login/login",
+    "pages/common/signup/signup",
+    "pages/publication/bookshelf/bookshelf",
+    "pages/publication/content/content",
+    "pages/publication/bodycopy/bodycopy",
+    "pages/scan-code/scan-code",
+    "pages/common/share/share",
+    "pages/test/logs/logs",
+    "pages/common/register/register",
+    "pages/dock/dock"
+  ],
+  "subPackages": [],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我們就是這樣一群人",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

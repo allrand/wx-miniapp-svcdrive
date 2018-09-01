@@ -1,0 +1,20 @@
+<view class="register">
+  <view class="register_disp">
+    <!-- <image src="../../images/logo.png"></image> -->
+    <input type="text" placeholder=" 姓名 " placeholder-style="color:rgb(173,185,193)" bindinput="bindDispname" />
+  </view>
+  <view class="register_user">
+    <input type="text" placeholder=" 帳號 " placeholder-style="color:rgb(173,185,193)" bindinput="bindUsername" />
+  </view>
+  <view class="register_pwd">
+    <input type="text" password placeholder=" 密碼 " placeholder-style="color:rgb(173,185,193)" bindinput="bindPassword" />
+  </view>
+  <view class="register_text">
+    <view>
+      <text>已有帳號？</text>
+      <navigator url="../login/login" redirect hover-class="navigator-hover">登 陸</navigator>
+    </view>
+  </view>
+  <button hover-class="btn_hover" bindtap="register">注 册</button>
+  <!-- class="register_btn" -->
+</view>

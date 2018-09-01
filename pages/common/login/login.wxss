@@ -1,0 +1,98 @@
+/* pages/common/login/login.wxss */
+
+.login {
+  width: 100%;
+  height: 100%; /*620px;*/
+  background-color: #fff;
+}
+
+.login-form {
+  margin-top: 60px;
+}
+
+.login_img {
+  width: 160px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.login_user input {
+  margin: 30px auto 15px auto;
+}
+
+.login_pwd input {
+  margin: 15px auto 0 auto;
+}
+
+.account, .password {
+  /* border-bottom: 1rpx solid #ccc; */
+  width: 70%;
+  height: 45px;
+  border: 1px solid rgb(173, 185, 193);
+  border-radius: 3px;
+  padding-left: 12px;
+  line-height: 15px;
+  font-size: 15px;
+  font-family: ".SFNSText-Regular";
+  position: relative;
+  /* margin: 0 10rpx; */
+  margin-bottom: 40rpx;
+  /* 
+  padding-left: 180rpx;
+   */
+   margin: 30px auto 15px auto;
+}
+
+.account:before {
+  content: '';/* 帳號 */
+  position: absolute;
+  left: 20rpx;
+}
+
+.password:before {
+  content: '';/* 密碼 */
+  position: absolute;
+  left: 20rpx;
+}
+
+.account.active, .password.active {
+  border-color: #1e88e5;
+}
+
+.submit {
+  margin: 10 10rpx;
+}
+
+.login_btn {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 0;
+  line-height: 50px;
+  color: rgb(255, 255, 255);
+  background-color: #1aa0e5;
+}
+.register_text {
+	width: 100%;
+	height: 20px;
+	margin-top:50px;
+}
+.register_text view {
+	width: 110px;
+	margin: 0 auto;
+}
+.register_text text {
+	font-size: 15px;
+	display: inline-block;
+	float: left;
+	color: rgb(173,185,193);
+}
+.register_text navigator {
+	font-size: 15px;
+	display: inline-block;
+	float: right;
+	color: black;
+	border-bottom: 1px solid black;
+}

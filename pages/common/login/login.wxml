@@ -1,0 +1,21 @@
+<!--pages/common/login/login.wxml-->
+<view class="login">
+  <view class="register_text">
+    <view>
+      <text>沒有帳號?</text>
+      <navigator url="../register/register" redirect hover-class="navigator-hover">註 冊</navigator>
+    </view>
+  </view>
+
+  <view class="login-form">
+    <form bindsubmit="loginSubmit" bindreset="loginReset" data-disabled="{{!username}}">
+
+      <input name="username" placeholder=" 帳號 " placeholder-style="color:rgb(173,185,193)" bindinput="validate" bindfocus="focus" bindblur="blur" data-name="username" class="account {{active==='username' ? 'active' : ''}}" />
+
+
+
+      <input name="password" placeholder=" 密碼 " placeholder-style="color:rgb(173,185,193)" type='password' bindinput="validate" bindfocus="focus" bindblur="blur" data-name="password" class="password {{active==='password' ? 'active' : ''}}" />
+      <button class="{{!username ? 'BGColor2' : 'BGColor1'}} colorWhite submit" form-type="submit">登 陸</button>
+    </form>
+  </view>
+</view>

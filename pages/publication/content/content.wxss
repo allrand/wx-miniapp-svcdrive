@@ -1,0 +1,152 @@
+/* pages/content/content.wxss */
+.contentPage {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1334px;
+  z-index: 13;
+}
+.Navigation_Bar {
+  background-color: rgb(55, 56, 59);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 128px;
+  z-index: 12;
+}
+.pic {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1334px;
+  z-index: 11;
+}
+.Rectangle {
+  background-color: rgb(250, 250, 250);
+  position: absolute;
+  left: 31px;
+  top: 356px;
+  width: 690px;
+  height: 390px;
+  z-index: 8;
+}
+.Content {
+  font-size: 34px;
+  font-family: "PingFang SC";
+  color: rgb(17, 17, 17);
+  line-height: 1.471;
+  position: absolute;
+  left: 29.844px;
+  top: 828.909px;
+  width: 683px;
+  height: 531px;
+  z-index: 6;
+}
+.AuthorLabel {
+  font-size: 30px;
+  font-family: "PingFang SC";
+  color: rgb(87, 107, 149);
+  line-height: 1.2;
+  position: absolute;
+  left: 349.98px;
+  top: 251.979px;
+  z-index: 5;
+}
+.DatetimeLabel {
+  font-size: 30px;
+  font-family: "SFUIDisplay";
+  color: rgb(136, 136, 136);
+  line-height: 1.2;
+  position: absolute;
+  left: 37.173px;
+  top: 254px;
+  z-index: 4;
+}
+.Title {
+  font-size: 48px;
+  font-family: "PingFang SC";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  position: absolute;
+  left: 29.512px;
+  top: 172.667px;
+  z-index: 3;
+}
+.Background {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1334px;
+  z-index: 2;
+}
+
+
+.content {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #999999;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.ingredients {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.ingredients-inner {
+    margin: 10px;
+}
+
+.chapter-scroll-list {
+    width: 100%;
+    border-radius: 5px;
+}
+.chapter-scroll-list-item1{
+  margin-left: 10px;
+}
+.chapter-scroll-list-item2{
+  margin-left: 20px;
+}
+.chapter-scroll-list-item3{
+  margin-left: 30px;
+}
+.content-img{
+  /* width: 100%; */
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}

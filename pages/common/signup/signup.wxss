@@ -1,0 +1,12 @@
+/* pages/common/signup/signup.wxss */
+
+.sigup-form {
+    margin-top:80px;
+}
+.account, .password {
+    border-bottom: 1rpx solid #ccc;
+    margin: 0 10rpx;
+    margin-bottom: 40rpx;
+    padding-left: 180rpx;
+    position: relative;
+}
